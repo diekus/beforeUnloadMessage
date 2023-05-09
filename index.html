@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onBeforeUnload test : 🤘🏽</title>
+    <script>
+        window.onbeforeunload = (event) => {
+            event.preventDefault();
+            createDefMessage();
+        };
+
+        let createDefMessage = () => {
+            let msgContainer = document.body;
+            let msg = document.createElement('strong');
+            msg.innerText = 'Custom Message: Dont leave it s a trap!';
+            msgContainer.appendChild(msg);
+        }
+        
+    </script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>onBeforeUnload test</h1>
+    <p>Can devs create a "default message" on their web content BEFORE the onBeforeUnload event happens.</p>
+    
+</body>
+</html>
