@@ -7,8 +7,8 @@
     <title>onBeforeUnload test : 🤘🏽</title>
     <script>
         window.onbeforeunload = (event) => {
-            event.preventDefault();
             createDefMessage();
+            event.preventDefault();
         };
 
         let createDefMessage = () => {
